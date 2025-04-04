@@ -1,0 +1,56 @@
+.business-trending-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .business-trending-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .business-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .business-info {
+    padding: 15px;
+  }
+  
+  .business-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .business-description {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+  
+  .business-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 1.2rem;
+    color: #ccc; /* Default star color */
+    margin-right: 5px;
+  }
+  
+  .star.filled {
+    color: #ffcc00; /* Gold color for filled stars */
+  }
+  

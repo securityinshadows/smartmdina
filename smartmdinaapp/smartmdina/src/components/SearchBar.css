@@ -1,0 +1,33 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  background-color: #f7f1ea;
+  border-radius: 25px;
+  padding: 5px 15px;
+  box-shadow: 1px 0px 9px 5px #0000007a;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: black;
+}
+
+.icon-button img {
+
+  width: 20px;
+  height: 20px;
+}
+.icon-button{
+  background-color: #fbedd0c0;
+}
+.icon-button:hover {
+  background-color: #ffcf56d2;
+}

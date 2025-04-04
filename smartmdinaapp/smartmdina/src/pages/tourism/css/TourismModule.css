@@ -1,0 +1,111 @@
+/* General Styles */
+.tourism-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #333333;
+  }
+  
+  .content {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #b96d30;
+  }
+  
+  .category-section {
+    margin: 30px 0;
+  }
+  
+  .category-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #000000;
+  }
+  
+  /* Carousel Styling */
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+    scrollbar-width: thin;
+  }
+  
+  .carousel::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .carousel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Card Styling */
+  .card {
+    flex: 0 0 auto;
+    width: 250px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-content {
+    padding: 10px 15px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0 10px;
+  }
+  
+  .card-content .extra-info {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .carousel {
+      gap: 10px;
+    }
+  
+    .card {
+      width: 200px;
+    }
+  }
+  

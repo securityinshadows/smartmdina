@@ -1,0 +1,63 @@
+.job-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: white;
+  color: #000000;
+  width: 100%; 
+  max-width: 600px; 
+  padding: 15px;
+  margin: 15px auto; 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.job-card:hover {
+  background-color: #f9f9f9; 
+}
+
+.job-content {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.job-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.job-details {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.job-details span {
+  font-weight: 600;
+}
+
+.bookmark-button {
+  margin-top: 15px;
+  padding: 8px 12px;
+  background-color: #ff6200;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.bookmark-button:hover {
+  background-color: #e05a00; 
+}
+
+.bookmark-icon {
+  width: 20px;
+  height: 20px;
+  transition: opacity 0.3s ease;
+}

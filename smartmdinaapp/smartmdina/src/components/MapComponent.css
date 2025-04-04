@@ -1,0 +1,26 @@
+
+.map-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure it takes the full width of its parent */
+    max-width: 600px; /* Optionally, set a max-width to avoid large sizes */
+    height: 300px; /* Fixed height for the map */
+    margin: 20px auto; /* Center the container in the middle of the page */
+    background-color: white;
+    border: 1px solid #ccc; /* Border to match your design */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .map-container .leaflet-container {
+    width: 100%;
+    height: 100%; /* Ensure the map container fits fully within the parent */
+    border-radius: 5px; /* Matching rounded corners */
+  }
+  
+  .map-container:hover {
+    background-color: #f0f0f0; /* Light hover effect */
+    transition: 0.5s; /* Smooth transition on hover */
+  }
+  
+  

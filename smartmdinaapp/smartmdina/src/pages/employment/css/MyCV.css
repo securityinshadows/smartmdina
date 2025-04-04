@@ -1,0 +1,35 @@
+.my-cv {
+    padding: 20px;
+  }
+  
+  .my-cv h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cv-section {
+    margin-bottom: 20px;
+  }
+  
+  .cv-section h2 {
+    font-size: 1.2rem;
+  }
+  
+  .cv-section ul {
+    padding-left: 20px;
+  }
+  
+  .download-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .download-button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,137 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden; /* to prevent horizontal overflow */
+  }
+  
+  .admin-page {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: auto;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+  
+  .admin-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/casatram.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px);
+    z-index: -1;
+    box-sizing: border-box;
+  }
+  
+  .content {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+  }
+  
+  h1, h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  
+  .admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .admin-table th, .admin-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .admin-table th {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+  }
+  
+  .admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .admin-table tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .admin-table td {
+    color: rgb(0, 0, 0);
+  }
+  
+  .btn-remove {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .btn-remove:hover {
+    background-color: #d32f2f;
+  }
+  
+  @media (max-width: 768px) {
+    .admin-page::before {
+      background-attachment: scroll;
+    }
+  
+    .admin-table th, .admin-table td {
+      font-size: 14px;
+    }
+  
+    .search-bar {
+      max-width: 100%;
+    }
+  }
+  

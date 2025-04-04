@@ -1,0 +1,161 @@
+/* Global styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.my-applications {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: auto;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+
+.my-applications::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('financecity.jpg'); /* Change to an appropriate background */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(2px);
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+.main-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Title */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f1f1f1;
+  text-shadow: #000000 1px 1px 10px;
+}
+
+h2:hover {
+  font-size: 3rem;
+  color: #62b6ab;
+  text-shadow: #000000 5px 5px 4px;
+  transition: 0.5s;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Application List */
+.application-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Application Cards */
+.application-card {
+  color: #000000;
+  width: calc(50% - 30px);
+}
+
+
+/* Application Cards */
+.application-card {
+  color: #000000;
+  width: calc(50% - 30px);
+  padding: 10px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.application-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.application-card .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.application-card .status {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.application-card .salary {
+  font-size: 1rem;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.application-card .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* No results message */
+.no-results {
+  font-size: 1.2rem;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .application-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .application-card {
+      width: 100%;
+      margin: 10px 0;
+  }
+}

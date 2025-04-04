@@ -1,0 +1,187 @@
+.job-details {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .job-details::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('financecity.jpg'); /* replace with the correct path to your image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(4px);
+    z-index: -1;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .job-details-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .job-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-shadow: #000000 1px 1px 10px;
+  }
+  
+  .job-title:hover {
+    font-size: 2.2rem;
+    color: #62b6ab;
+    text-shadow: #000000 5px 5px 4px;
+    transition: 0.5s;
+  }
+  
+  .job-description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .job-details-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .apply-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #c8ae6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  
+  .apply-button:hover {
+    background-color: #cf9d51;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Popup overlay, same as in Popup.css */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-card {
+    background-color: #f5f2ea;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .popup-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .popup-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .popup-card form label {
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .popup-card form input {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .popup-card form input:focus {
+    border-color: #888;
+    outline: none;
+  }
+  
+  .popup-card form button {
+    background-color: #c8ae6d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-card form button:hover {
+    background-color: #cf9d51;
+  }
+  
+  .popup-card .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .popup-card .close-btn:hover {
+    color: #333;
+  }
+  

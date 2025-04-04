@@ -1,0 +1,106 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden; /* to prevent horrizontal overflow (but could be stopping scroll) */
+}
+
+.home-page {
+  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: auto; 
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.home-page::before {
+    align-items: center;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/casatram.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px);
+    z-index: -1;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* content aligned to the top */
+    align-items: center;
+    color: white;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1; /* content can grow if necessary */
+    overflow: auto;
+    min-height: 0; /* no content pushed out */
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+     gap: 20px;
+    overflow: hidden;
+    box-sizing: border-box; 
+    position: relative; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    filter: drop-shadow(2px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-links {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links a {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .home-page::before {
+        background-attachment: scroll;
+    }
+}
+.news-card, .trending-card {
+    max-height: 600px;
+    overflow: hidden;
+}

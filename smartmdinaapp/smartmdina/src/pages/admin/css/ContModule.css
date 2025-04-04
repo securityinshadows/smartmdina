@@ -1,0 +1,214 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.contributor-page {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: auto;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+/* Background styling for contributor page */
+.contributor-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/contributor-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: none;
+    opacity: 0;
+}
+
+.carousel-item.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Admin Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Button Styles */
+.btn-add {
+    background-color: #c8ae6d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #cf9d51;
+}
+
+/* Popup Styling */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.popup-card {
+    background-color: #f5f2ea;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+}
+
+.popup-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.popup-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup-card form label {
+    font-size: 1rem;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.popup-card form input {
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.popup-card form input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+.popup-card form button {
+    background-color: #c8ae6d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup-card form button:hover {
+    background-color: #cf9d51;
+}
+
+.popup-card .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+}
+
+.popup-card .close-btn:hover {
+    color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .carousel-container {
+        gap: 10px;
+    }
+
+    .btn-add {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .popup-card {
+        width: 95%;
+        max-height: 90vh;
+    }
+}
